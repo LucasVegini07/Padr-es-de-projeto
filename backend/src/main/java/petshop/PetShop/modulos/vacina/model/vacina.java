@@ -3,6 +3,7 @@ package petshop.PetShop.modulos.vacina.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 
 @Entity
 public class vacina implements Serializable {
@@ -16,15 +17,13 @@ public class vacina implements Serializable {
     private int id;
 
     private String nome;
+    private String composicao;
+    private String localAplicacao;
+    private LocalDate validade;
+    private String lote;
     private String descricao;
 
     public vacina(){}
-
-    public vacina(int id, String nome, String descricao) {
-        this.id = id;
-        this.nome = nome;
-        this.descricao = descricao;
-    }
 
     public int getId() {
         return id;
@@ -40,6 +39,38 @@ public class vacina implements Serializable {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getComposicao() {
+        return composicao;
+    }
+
+    public void setComposicao(String composicao) {
+        this.composicao = composicao;
+    }
+
+    public String getLocalAplicacao() {
+        return localAplicacao;
+    }
+
+    public void setLocalAplicacao(String localAplicacao) {
+        this.localAplicacao = localAplicacao;
+    }
+
+    public LocalDate getValidade() {
+        return validade;
+    }
+
+    public void setValidade(LocalDate validade) {
+        this.validade = validade;
+    }
+
+    public String getLote() {
+        return lote;
+    }
+
+    public void setLote(String lote) {
+        this.lote = lote;
     }
 
     public String getDescricao() {

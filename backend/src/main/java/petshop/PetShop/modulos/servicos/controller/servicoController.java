@@ -35,7 +35,7 @@ public class servicoController {
     }
 
     @GetMapping(value = "/servico/{animalId}", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<?> getByAnimalId(
+    public ResponseEntity<?> getServiceByAnimal(
             @PathVariable String animalId) {
         return new ResponseEntity<>(servicoService.getAllByAnimalId(animalId), HttpStatus.OK);
     }

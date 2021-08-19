@@ -8,4 +8,6 @@ import java.util.List;
 public interface animalRepository extends CrudRepository<animal, Long> {
 
     animal getById(int id);
-    List getByCliente_Id(int id);}
+    List getByCliente_Id(int id);
+
+}
